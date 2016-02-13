@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="609e77b4-098a-4816-8ebc-51d8d0b831f9" activeEnvironment="Default environment" name="SOAP-assignment1" resourceRoot="" soapui-version="6.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="2860b283-f0c8-45a1-ab69-f2a1cc27a80c" wsaVersion="NONE" name="GeoIPServiceSoap" type="wsdl" bindingName="{http://www.webservicex.net/}GeoIPServiceSoap" soapVersion="1_1" anonymous="optional" definition="http://www.webservicex.net/geoipservice.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://www.webservicex.net/geoipservice.asmx</con:endpoint></con:endpoints><con:operation id="6f0084f8-c2ee-47dd-a54c-60fc9bd1dde7" isOneWay="false" action="http://www.webservicex.net/GetGeoIP" name="GetGeoIP" bindingOperationName="GetGeoIP" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="930ef902-e9f4-4ac6-8735-e9967973aaaa" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/geoipservice.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webservicex.net/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetGeoIP>
+         <!--Optional:-->
+         
+      <web:IPAddress>212.58.244.23</web:IPAddress></web:GetGeoIP>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/GetGeoIP"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="d6b17e9e-e02f-4727-890d-6c773014e29b" isOneWay="false" action="http://www.webservicex.net/GetGeoIPContext" name="GetGeoIPContext" bindingOperationName="GetGeoIPContext" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b096c43e-d15a-4eba-ac9d-bd10b5a0a6ff" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/geoipservice.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webservicex.net/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetGeoIPContext/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/GetGeoIPContext"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="f3ade155-90bb-431c-8f48-7c4bbbb9c306" wsaVersion="NONE" name="GeoIPServiceSoap12" type="wsdl" bindingName="{http://www.webservicex.net/}GeoIPServiceSoap12" soapVersion="1_2" anonymous="optional" definition="http://www.webservicex.net/geoipservice.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.webservicex.net/geoipservice.asmx?wsdl"><con:part><con:url>http://www.webservicex.net/geoipservice.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.webservicex.net/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.webservicex.net/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.webservicex.net/">
+      <s:element name="GetGeoIP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeoIPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeoIPResult" type="tns:GeoIP"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GeoIP">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ReturnCode" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnCodeDetails" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CountryName" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGeoIPContext">
+        <s:complexType/>
+      </s:element>
+      <s:element name="GetGeoIPContextResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeoIPContextResult" type="tns:GeoIP"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeoIP" nillable="true" type="tns:GeoIP"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetGeoIPSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeoIP"/>
+  </wsdl:message>
+  <wsdl:message name="GetGeoIPSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeoIPResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetGeoIPContextSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeoIPContext"/>
+  </wsdl:message>
+  <wsdl:message name="GetGeoIPContextSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeoIPContextResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetGeoIPHttpGetIn">
+    <wsdl:part name="IPAddress" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetGeoIPHttpGetOut">
+    <wsdl:part name="Body" element="tns:GeoIP"/>
+  </wsdl:message>
+  <wsdl:message name="GetGeoIPContextHttpGetIn"/>
+  <wsdl:message name="GetGeoIPContextHttpGetOut">
+    <wsdl:part name="Body" element="tns:GeoIP"/>
+  </wsdl:message>
+  <wsdl:message name="GetGeoIPHttpPostIn">
+    <wsdl:part name="IPAddress" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetGeoIPHttpPostOut">
+    <wsdl:part name="Body" element="tns:GeoIP"/>
+  </wsdl:message>
+  <wsdl:message name="GetGeoIPContextHttpPostIn"/>
+  <wsdl:message name="GetGeoIPContextHttpPostOut">
+    <wsdl:part name="Body" element="tns:GeoIP"/>
+  </wsdl:message>
+  <wsdl:portType name="GeoIPServiceSoap">
+    <wsdl:operation name="GetGeoIP">
+      <wsdl:documentation>GeoIPService - GetGeoIP enables you to easily look up countries by IP addresses</wsdl:documentation>
+      <wsdl:input message="tns:GetGeoIPSoapIn"/>
+      <wsdl:output message="tns:GetGeoIPSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoIPContext">
+      <wsdl:documentation>GeoIPService - GetGeoIPContext enables you to easily look up countries by Context</wsdl:documentation>
+      <wsdl:input message="tns:GetGeoIPContextSoapIn"/>
+      <wsdl:output message="tns:GetGeoIPContextSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="GeoIPServiceHttpGet">
+    <wsdl:operation name="GetGeoIP">
+      <wsdl:documentation>GeoIPService - GetGeoIP enables you to easily look up countries by IP addresses</wsdl:documentation>
+      <wsdl:input message="tns:GetGeoIPHttpGetIn"/>
+      <wsdl:output message="tns:GetGeoIPHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoIPContext">
+      <wsdl:documentation>GeoIPService - GetGeoIPContext enables you to easily look up countries by Context</wsdl:documentation>
+      <wsdl:input message="tns:GetGeoIPContextHttpGetIn"/>
+      <wsdl:output message="tns:GetGeoIPContextHttpGetOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="GeoIPServiceHttpPost">
+    <wsdl:operation name="GetGeoIP">
+      <wsdl:documentation>GeoIPService - GetGeoIP enables you to easily look up countries by IP addresses</wsdl:documentation>
+      <wsdl:input message="tns:GetGeoIPHttpPostIn"/>
+      <wsdl:output message="tns:GetGeoIPHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoIPContext">
+      <wsdl:documentation>GeoIPService - GetGeoIPContext enables you to easily look up countries by Context</wsdl:documentation>
+      <wsdl:input message="tns:GetGeoIPContextHttpPostIn"/>
+      <wsdl:output message="tns:GetGeoIPContextHttpPostOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GeoIPServiceSoap" type="tns:GeoIPServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetGeoIP">
+      <soap:operation soapAction="http://www.webservicex.net/GetGeoIP" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoIPContext">
+      <soap:operation soapAction="http://www.webservicex.net/GetGeoIPContext" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GeoIPServiceSoap12" type="tns:GeoIPServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetGeoIP">
+      <soap12:operation soapAction="http://www.webservicex.net/GetGeoIP" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoIPContext">
+      <soap12:operation soapAction="http://www.webservicex.net/GetGeoIPContext" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GeoIPServiceHttpGet" type="tns:GeoIPServiceHttpGet">
+    <http:binding verb="GET"/>
+    <wsdl:operation name="GetGeoIP">
+      <http:operation location="/GetGeoIP"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoIPContext">
+      <http:operation location="/GetGeoIPContext"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GeoIPServiceHttpPost" type="tns:GeoIPServiceHttpPost">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="GetGeoIP">
+      <http:operation location="/GetGeoIP"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeoIPContext">
+      <http:operation location="/GetGeoIPContext"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GeoIPService">
+    <wsdl:port name="GeoIPServiceSoap" binding="tns:GeoIPServiceSoap">
+      <soap:address location="http://www.webservicex.net/geoipservice.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="GeoIPServiceSoap12" binding="tns:GeoIPServiceSoap12">
+      <soap12:address location="http://www.webservicex.net/geoipservice.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="GeoIPServiceHttpGet" binding="tns:GeoIPServiceHttpGet">
+      <http:address location="http://www.webservicex.net/geoipservice.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="GeoIPServiceHttpPost" binding="tns:GeoIPServiceHttpPost">
+      <http:address location="http://www.webservicex.net/geoipservice.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.webservicex.net/geoipservice.asmx</con:endpoint></con:endpoints><con:operation id="086c0fef-b887-4302-a8d5-9aaac28eec49" isOneWay="false" action="http://www.webservicex.net/GetGeoIP" name="GetGeoIP" bindingOperationName="GetGeoIP" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="68a8d704-38d0-465d-8c22-d8f273ce203f" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/geoipservice.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webservicex.net/">
+   <soap:Header/>
+   <soap:Body>
+      <web:GetGeoIP>
+         <!--Optional:-->
+         <web:IPAddress>?</web:IPAddress>
+      </web:GetGeoIP>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/GeoIPServiceSoap/GetGeoIPRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="ad51e270-c815-4ef2-aea6-aa0b799f8b52" isOneWay="false" action="http://www.webservicex.net/GetGeoIPContext" name="GetGeoIPContext" bindingOperationName="GetGeoIPContext" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8ecf141e-2a46-4f39-bddc-c3f1098e2946" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/geoipservice.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webservicex.net/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <web:GetGeoIPContext/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webservicex.net/GeoIPServiceSoap/GetGeoIPContextRequest"/></con:call></con:operation></con:interface><con:testSuite id="a5273952-2614-4707-a18a-ac7f8276b222" name="GeoIPServiceSoap TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1ed9be5e-05ec-4a82-8127-5ae7851a50d6" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetGeoIP TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="800f8dd5-5e97-41a1-8ae4-d886d40705cd" name="GetGeoIP"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GeoIPServiceSoap</con:interface><con:operation>GetGeoIP</con:operation><con:request name="GetGeoIP" id="7bd65d96-d074-4786-b1f8-f5dd1e3b72fd" defaultOutgoingWss="" defaultIncomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/geoipservice.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webservicex.net/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetGeoIP>
+         <!--Optional:-->
+         
+      <web:IPAddress>212.58.244.23</web:IPAddress></web:GetGeoIP>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="http://www.webservicex.net/GetGeoIP" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="assertionteststep" name="CountryAssert" id="137af7b9-771b-4522-a5a4-dabfd02511bc"><con:settings/><con:config xsi:type="con:AssertionTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:entry><con:id>9184646d-938b-4243-9ca0-ac6581c99533</con:id><con:isGroup>false</con:isGroup><con:sourceId>800f8dd5-5e97-41a1-8ae4-d886d40705cd</con:sourceId><con:propertyName>Response</con:propertyName><con:assertion type="Simple Contains" name="Contains" id="6882d7b5-d9fe-410c-bf81-8f1956f57de7"><con:configuration><token>CountryName</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion></con:entry></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>800f8dd5-5e97-41a1-8ae4-d886d40705cd</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:authRepository/></con:soapui-project>

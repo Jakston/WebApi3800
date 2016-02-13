@@ -1,0 +1,26 @@
+Gediminas Jakstonis
+Web API
+
+SOAP Endpoint HTTP Headers
+
+GetGeoIP
+HTTP/1.1 200 OK – The http protocol used by the web server, the server code 200, which means that the server is operating normally
+
+Cache-control – private, max-age = 0, meaning that the content provided should not be cached
+
+Content-Type – the type of content, in this case text/xml using utf-8
+
+Content-Encoding – how the content is encoded
+
+Vary – the server accepts encoding 
+
+Server – server name
+
+X-AspNet-Version – its version
+
+X-Powered-By – type of above
+
+Date – when the message was sent
+
+Content-Length – length of the message
+

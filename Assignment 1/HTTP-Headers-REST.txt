@@ -1,0 +1,35 @@
+Gediminas Jakstonis
+Web API
+
+Rest Request HTTP Headers
+
+alt-svc – advertises the availability of alternative services, for example “http2” = 8000 means that the server has  http2 protocol on the same host on the port 8000.
+
+alternate-protocol – experimental header from google
+
+cache-control – tells whether the client should cache the object.
+
+Content-encoding – the type of encoding used on the data.
+
+Content-length – Length of the body in bytes.
+
+Content-type – defines the type of Multi-purpose Internet Mail Extension the page is of.
+
+Date – when the response was sent.
+
+Etag – Unique identification of the content
+
+expires – When the response should be replaced.
+
+Server – Server name.
+
+Status – server status.
+
+Vary – how to handle caching the content of the page. 
+
+X-content-type-options – Prevents IE from losing a response due to MIME.
+
+X-frame-options – Prevents invisible layers from redirecting the page due to clicks. (Clickjacking)
+
+x-xss-protection – re-enables xss filter.
+
