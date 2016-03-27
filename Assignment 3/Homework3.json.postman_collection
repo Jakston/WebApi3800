@@ -1,0 +1,56 @@
+{
+	"id": "5f20cc91-7252-a4e2-d0fb-1bd193364d8c",
+	"name": "Homework3",
+	"description": "",
+	"order": [
+		"03b9eb5c-913d-786c-4cc7-192f3a6e3116",
+		"a189b0c9-7665-93ac-bf69-d0d7eb40be05"
+	],
+	"folders": [],
+	"timestamp": 1459044171298,
+	"owner": 0,
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "03b9eb5c-913d-786c-4cc7-192f3a6e3116",
+			"headers": "Authorization: Bearer KbQbhK1hG4oRGrdpw3Ro12fBmZBe\n",
+			"url": "http://gj3800webapi-prod.apigee.net/homework3/plsgib?username=jakston",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "5f20cc91-7252-a4e2-d0fb-1bd193364d8c",
+			"data": null,
+			"dataMode": "params",
+			"name": "Github Test - SUCCESS in both tests if is TOKEN valid ",
+			"description": "A token has to be generated in order to ensure that valid authorization works\nA successful query will have the query name as username\nThe user will be found if the username exists on github",
+			"descriptionFormat": "html",
+			"time": 1459053697078,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Valid Authorization\"] = responseBody.has(\"User\");\ntests[\"Valid user\"] = responseBody.has(\"created_at\")",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "a189b0c9-7665-93ac-bf69-d0d7eb40be05",
+			"headers": "Authorization: Bearer KbQbhK1hG4oRGrdpw3Ro12fBmZBe\n",
+			"url": "http://gj3800webapi-prod.apigee.net/homework3/plsgib?username=jakstonw43534534532",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "5f20cc91-7252-a4e2-d0fb-1bd193364d8c",
+			"data": null,
+			"dataMode": "params",
+			"name": "Github Test - SUCCESS in AUTH only if TOKEN is valid",
+			"description": "This should only pass the authorization test unless a new github account is created with the query value specified.",
+			"descriptionFormat": "html",
+			"time": 1459054132494,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Valid Authorization\"] = responseBody.has(\"User\");\ntests[\"Valid user\"] = responseBody.has(\"created_at\")",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
