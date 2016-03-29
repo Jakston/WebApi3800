@@ -1,2 +1,16 @@
 Oauth should not be in the main flow because then it is on the 
 front end of the application making it less secure.
+
+
+Make sure Oauth 2.0 is selected for authorization on the tests
+Auth URL: 
+https://gj3800webapi-test.apigee.net/oauth/
+
+Access Token URL:
+https://gj3800webapi-test.apigee.net/oauth/client_credential/accesstoken?grant_type=client_credentials
+
+Client ID:
+Php69dtOgydVi1RRityWOv5WfuMiEnQs
+
+Client Secret:
+V8eIZXnVYJlZGCkz
